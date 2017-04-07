@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+ENV['RAILS_ADMIN_THEME'] = 'rollincode'
 
 module ProjectDevise
   class Application < Rails::Application
@@ -22,5 +23,14 @@ module ProjectDevise
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    ActionMailer::Base.smtp_settings = {
+        :address => 'smtp.gmail.com',
+        :domain => 'mail.google.com',
+        :port => 587,
+        :user_name => '1estmai1max@gmail.com',
+        :password => 'nSTxEHm48v?9',
+        :authentication => 'login',
+        :enable_starttls_auto => true
+    }
   end
 end

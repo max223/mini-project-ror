@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rorformation</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </head>
+  <div>
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href=<%= root_path %>>RoR Formation</a>
+      <a class="nav-link" href=<%= salut_path%> > Salut </a>
+      <a class="nav-link" href=<%= posts_path%> > Articles </a>
+      <ul class="nav navbar-nav">
+      </ul>
+    </nav>
+    </div>
+    <div class="container" style="padding-top: 5rem">
+    <%= yield %>
+    </div>
+</html>

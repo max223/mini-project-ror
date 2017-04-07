@@ -50,7 +50,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
-  end
+  endw
 
   # DELETE /posts/1
   # DELETE /posts/1.json
@@ -72,4 +72,5 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content)
     end
+  end
 end
